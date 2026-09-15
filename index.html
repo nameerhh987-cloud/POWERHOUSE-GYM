@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Powerhouse Gym Miami - Miami's premier strength & fitness destination. Train with world-class equipment, top-tier coaches, and an elite community in Downtown Miami.">
+  <meta name="keywords" content="Powerhouse Gym, Powerhouse Gym Miami, Gym Downtown Miami, Strength Training, Free Weights, Personal Training Miami, 24/7 Gym Miami">
+  <title>POWERHOUSE GYM | Downtown Miami, FL</title>
+
+  <!-- Google Fonts: Bebas Neue (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN for Modern Utility Spacing & Responsiveness -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#050507',
+              dark: '#0c0c0f',
+              card: '#121216',
+              cardHover: '#18181f',
+              white: '#FFFFFF',
+              border: 'rgba(255, 255, 255, 0.12)',
+              muted: '#9E9EA8'
+            }
+          },
+          fontFamily: {
+            heading: ['"Bebas Neue"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Three.js for Interactive 3D Objects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#050507] text-[#F4F4F6] font-['Inter'] antialiased selection:bg-[#FFFFFF] selection:text-black">
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo: Brand Title & Sub-brand Tag -->
+      <a href="#hero" class="brand-logo" aria-label="Powerhouse Gym Miami Home">
+        <span class="logo-main">POWERHOUSE <span>GYM</span></span>
+        <span class="logo-sub">DOWNTOWN &bull; MIAMI, FL</span>
+      </a>
+
+      <!-- Desktop Navigation: Clean Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#why-abf" class="nav-link">Why Us</a>
+        <a href="#programs" class="nav-link">Programs</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right CTA Button (Pure White High-Contrast) -->
+      <div class="header-actions">
+        <a href="#pricing" class="btn-white">CLAIM PASS</a>
+      </div>
+
+      <!-- Mobile Hamburger (<= 992px) -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <div class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Over Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="margin-bottom: 2rem;">
+        <span class="logo-main">POWERHOUSE <span>GYM</span></span>
+        <div class="logo-sub">DOWNTOWN &bull; MIAMI, FL</div>
+      </div>
+      <nav class="drawer-nav">
+        <a href="#hero" class="drawer-link" data-close-drawer><span>Home</span> <span>&rarr;</span></a>
+        <a href="#why-abf" class="drawer-link" data-close-drawer><span>Why Us</span> <span>&rarr;</span></a>
+        <a href="#programs" class="drawer-link" data-close-drawer><span>Programs</span> <span>&rarr;</span></a>
+        <a href="#pricing" class="drawer-link" data-close-drawer><span>Pricing</span> <span>&rarr;</span></a>
+        <a href="#calculator" class="drawer-link" data-close-drawer><span>Fitness Calculator</span> <span>&rarr;</span></a>
+        <a href="#gallery" class="drawer-link" data-close-drawer><span>Gallery</span> <span>&rarr;</span></a>
+        <a href="#contact" class="drawer-link" data-close-drawer><span>Contact</span> <span>&rarr;</span></a>
+      </nav>
+    </div>
+
+    <div>
+      <a href="#pricing" class="btn-white" style="width: 100%; text-align: center; margin-bottom: 1rem;" data-close-drawer>CLAIM 3-DAY PASS</a>
+      <a href="tel:3055550199" class="btn-outline" style="width: 100%; text-align: center;">
+        CALL: (305) 555-0199
+      </a>
+      <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+        201 S Biscayne Blvd, Downtown Miami, FL<br>
+        Open 24/7 Facility Access
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Section 1: Hero with Interactive 3D Gym Object Stage -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container-grid">
+        <!-- Left: Headline, Badge, Description, CTAs -->
+        <div class="hero-content">
+          <!-- Location Badge -->
+          <div class="hero-tag">DOWNTOWN MIAMI &bull; FL</div>
+          
+          <!-- Main Headline -->
+          <h1 class="hero-title">
+            DOMINATE YOUR GOALS.<br>
+            <span>OWN THE FLOOR.</span>
+          </h1>
+
+          <!-- Description Text -->
+          <p class="hero-subtitle">
+            Miami's premier strength &amp; fitness destination. Train with world-class equipment, top-tier coaches, and an elite community in Downtown Miami.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#pricing" class="btn-white">CLAIM 3-DAY PASS</a>
+            <a href="#programs" class="btn-outline">EXPLORE PROGRAMS</a>
+          </div>
+        </div>
+
+        <!-- Right: Real-time 3D Gym Object (Olympic Hex Dumbbell) -->
+        <div class="hero-3d-wrapper" id="hero3dWrapper">
+          <canvas id="hero3dCanvas" aria-label="Interactive 3D Olympic Dumbbell"></canvas>
+          <div class="model-badge">
+            <span class="model-badge-dot"></span>
+            <span>INTERACTIVE 3D &bull; DRAG TO ROTATE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Stats Cards at the Bottom with Number Counting Animation -->
+      <div class="container" style="position: relative; z-index: 3; width: 100%;">
+        <div class="hero-stats-row" id="heroStatsRow">
+          <!-- Stat Card 1 -->
+          <div class="hero-stat-item" data-tilt>
+            <div class="stat-number" data-target="24/7">24/7</div>
+            <div class="stat-label">FACILITY ACCESS</div>
+          </div>
+          <!-- Stat Card 2 -->
+          <div class="hero-stat-item" data-tilt>
+            <div class="stat-number" data-target="100+">100+</div>
+            <div class="stat-label">PRO EQUIPMENT</div>
+          </div>
+          <!-- Stat Card 3 -->
+          <div class="hero-stat-item" data-tilt>
+            <div class="stat-number" data-target="4.3★">4.3★</div>
+            <div class="stat-label">1000+ GOOGLE REVIEWS</div>
+          </div>
+          <!-- Stat Card 4 -->
+          <div class="hero-stat-item" data-tilt>
+            <div class="stat-number" data-target="FREE">FREE</div>
+            <div class="stat-label">3-DAY TRIAL PASS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Why Choose Us (Clean 4 Cards Grid) -->
+    <section class="section section-alt" id="why-abf">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Why Powerhouse Gym</span>
+          <h2 class="section-title">Built For Results</h2>
+          <p class="section-subtitle">
+            World-class strength equipment, certified championship coaches, and dedicated athletic turf located in the heart of Downtown Miami.
+          </p>
+        </div>
+
+        <div class="features-grid" id="whyCardsGrid">
+          <!-- Injected via script.js from abfData.whyABF -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Programs (Simple & Clean) -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Training Programs</span>
+          <h2 class="section-title">Choose Your Pathway</h2>
+          <p class="section-subtitle">
+            Whether you want to build raw hypertrophy strength, incinerate body fat on the turf, or train 1-on-1 with an elite coach.
+          </p>
+        </div>
+
+        <div class="programs-grid" id="programsGrid">
+          <!-- Injected via script.js from abfData.programs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Memberships & Pricing -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Flexible Memberships</span>
+          <h2 class="section-title">Membership Plans</h2>
+          <p class="section-subtitle">
+            Straightforward pricing with no hidden fees. Complete access to pro equipment, recovery amenities, and locker rooms.
+          </p>
+        </div>
+
+        <div class="pricing-grid" id="pricingGrid">
+          <!-- Injected via script.js from abfData.pricing -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Simple User-Friendly Fitness Calculator -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Quick Health Tool</span>
+          <h2 class="section-title">Simple Fitness Calculator</h2>
+          <p class="section-subtitle">
+            Slide your height and weight below to immediately calculate your BMI and athletic recommendation.
+          </p>
+        </div>
+
+        <div class="calc-simple-container reveal">
+          <!-- Sliders -->
+          <div>
+            <!-- Height Slider -->
+            <div class="slider-block">
+              <div class="slider-top">
+                <span class="slider-title">Your Height</span>
+                <div class="slider-val"><span id="heightValue">175</span><span>cm</span></div>
+              </div>
+              <input type="range" class="simple-range" id="heightRange" min="130" max="220" value="175" step="1" aria-label="Height in cm">
+              <div class="range-legend">
+                <span>130 cm</span>
+                <span>175 cm</span>
+                <span>220 cm</span>
+              </div>
+            </div>
+
+            <!-- Weight Slider -->
+            <div class="slider-block">
+              <div class="slider-top">
+                <span class="slider-title">Your Weight</span>
+                <div class="slider-val"><span id="weightValue">75</span><span>kg</span></div>
+              </div>
+              <input type="range" class="simple-range" id="weightRange" min="40" max="150" value="75" step="1" aria-label="Weight in kg">
+              <div class="range-legend">
+                <span>40 kg</span>
+                <span>95 kg</span>
+                <span>150 kg</span>
+              </div>
+            </div>
+
+            <div style="font-size: 0.9rem; color: var(--text-muted); padding-top: 1rem; border-top: 1px solid var(--border-color);">
+              Estimated Imperial: <strong style="color: var(--text-white);" id="imperialEquivalent">5 ft 9 in &bull; 165.3 lbs</strong>
+            </div>
+          </div>
+
+          <!-- Result Panel -->
+          <div class="calc-result-panel">
+            <div>
+              <div class="bmi-label">Your Body Mass Index (BMI)</div>
+              <div class="bmi-score" id="bmiDisplay">24.5</div>
+              <div class="bmi-badge" id="bmiCategory">Healthy Athletic Range</div>
+              <p class="bmi-advice" id="bmiRecommendation">
+                Your body composition is in a prime athletic range. Ideal for heavy resistance hypertrophy and functional conditioning workouts.
+              </p>
+            </div>
+            <a href="#pricing" class="btn-white" style="margin-top: 1.5rem; text-align: center;">START TRAINING</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Clean Facility Gallery -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Facility Tour</span>
+          <h2 class="section-title">Inside The Floor</h2>
+          <p class="section-subtitle">
+            Explore our heavy iron platforms, 100+ pro strength machines, performance turf, and luxury recovery suite.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Injected via script.js from abfData.gallery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Contact & Location -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Visit Powerhouse Gym Miami</h2>
+          <p class="section-subtitle">
+            Stop by for a tour in Downtown Miami or message us directly to claim your 3-Day Trial Pass.
+          </p>
+        </div>
+
+        <div class="contact-simple-grid">
+          <!-- Info Card -->
+          <div class="contact-info-card reveal">
+            <div>
+              <div class="contact-row">
+                <div class="contact-label">Gym Location</div>
+                <div class="contact-value">
+                  201 S Biscayne Blvd, Downtown Miami, FL 33131
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-label">Direct Phone Hotline</div>
+                <div class="contact-value">
+                  <a href="tel:3055550199">(305) 555-0199</a>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-label">Facility Hours</div>
+                <div class="contact-value">
+                  Monday - Sunday: 24/7 Keycard &amp; Member Access<br>
+                  Staffed Hours: 06:00 AM - 10:00 PM
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+              Conveniently situated in Downtown Miami with dedicated member garage parking.
+            </div>
+          </div>
+
+          <!-- Quick Action Card -->
+          <div class="contact-action-card reveal delay-1">
+            <div class="contact-action-header">
+              <h3>READY TO DOMINATE?</h3>
+              <p>
+                Claim your complimentary 3-day trial pass or speak with our membership desk to get started immediately.
+              </p>
+            </div>
+
+            <div class="action-buttons-stack">
+              <a href="#pricing" class="btn-white" style="text-align: center; padding: 1rem;">
+                CLAIM 3-DAY PASS
+              </a>
+              <a href="tel:3055550199" class="btn-outline" style="text-align: center; padding: 1rem;">
+                CALL DIRECT (305) 555-0199
+              </a>
+            </div>
+
+            <div style="margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+              Instant verification &bull; No obligation required.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image Viewer">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImage">
+      <div class="lightbox-caption">
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clean Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid reveal">
+        <!-- Brand -->
+        <div>
+          <span class="logo-main">POWERHOUSE <span>GYM</span></span>
+          <div class="logo-sub" style="margin-bottom: 1rem;">DOWNTOWN &bull; MIAMI, FL</div>
+          <p style="font-size: 0.95rem; line-height: 1.6; max-width: 300px;">
+            Miami's premier strength &amp; fitness destination. Train with world-class equipment, top-tier coaches, and an elite community.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#why-abf">Why Us</a>
+            <a href="#programs">Programs</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div>
+          <h4 class="footer-title">Access Hours</h4>
+          <div class="footer-links">
+            <div>
+              <strong style="color: var(--text-white); font-size: 0.9rem;">24/7 Member Access</strong><br>
+              Every Day, 365 Days/Year
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <strong style="color: var(--text-white); font-size: 0.9rem;">Staffed Hours</strong><br>
+              06:00 AM - 10:00 PM
+            </div>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <h4 class="footer-title">Location</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.75rem;">
+            201 S Biscayne Blvd, Downtown Miami, FL 33131
+          </p>
+          <div class="footer-links">
+            <a href="tel:3055550199">Phone: (305) 555-0199</a>
+            <a href="#pricing" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">
+              Free 3-Day Trial Pass Available
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear"></span> POWERHOUSE GYM. All Rights Reserved. Downtown Miami, FL.
+        </div>
+        <div>
+          PRO STRENGTH &bull; ATHLETIC TURF &bull; 24/7 ACCESS &bull; LUXURY RECOVERY
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="three-hero.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
